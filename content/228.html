@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta property="head" content="H1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>228</title>
+
+<link rel="stylesheet" href="./../static/chimper/fonts/icomoon/style.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/magnific-popup.css">
+<link rel="stylesheet" href="./../static/chimper/css/jquery-ui.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.carousel.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="./../static/chimper/css/aos.css">
+<link rel="stylesheet" href="./../static/chimper/css/style.css">
+<link rel="shortcut icon" href="./../static/favicons.png">
+
+<style type="text/css">
+.site-section { background-color: #FFFF; padding: 40px 40px; }
+body > div > div.dropdown.open { display: block; }
+img.add_border { border: 3px solid blue; }
+
+.page-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    margin: 24px 0;
+    padding: 12px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-navigation .previous {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.page-navigation .next {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.page-navigation a {
+    display: inline-block;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.page-navigation a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script src="./../static/chimper/js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch_content.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch.js"></script>
+
+<script>
+function doSearch() {
+    if (window.jQuery && jQuery.fn.tipuesearch) {
+        jQuery('#tipue_search_input').tipuesearch({
+            newWindow: true,
+            minimumLength: 2,
+            wholeWords: false
+        });
+    }
+}
+
+if (window.jQuery) {
+    jQuery(document).ready(doSearch);
+}
+</script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css">
+<style>
+pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line {
+  white-space: pre !important; word-wrap: normal !important; word-break: normal !important;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="site-wrap">
+
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar py-4 bg-white" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      <h1>History</h1>
+
+      <div class="pl-4">
+        <form action="#" onsubmit="return false;">
+          <input type="text"
+                 placeholder="Search"
+                 name="q"
+                 id="tipue_search_input"
+                 pattern=".{2,}"
+                 title="At least 2 characters">
+        </form>
+      </div>
+
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+<li class="active has-children">
+<a href="index.html">Home</a>
+<ul class="dropdown">
+<li><a href="sitemap.html">SMap</a></li>
+</ul>
+</li>
+<li><a href="About.html">About</a></li>
+<li><a href="228.html">228</a></li>
+<li><a href="延平學院.html">延平學院</a></li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+           style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="tipue_search_content">
+<h1>228</h1>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="About.html">Previous: About</a></div>
+<div class="next"><a href="延平學院.html">Next: 延平學院</a> &gt;&gt;</div>
+</nav>
+
+<p><a href="https://228.drnh.gov.tw/index.php?act=Archive%2Fsearch">二二八事件檔案資料庫</a></p>
+<h4>二二八事件的起源與經過：聚焦嘉義市的歷史發展</h4>
+<p>二二八事件（1947年2月28日）是臺灣近代史上一個極為重要的歷史轉折點。它並不是單純的一場街頭抗議，也不只是外省人與本省人之間的族群衝突，而是戰後臺灣在政治接收失當、經濟困境、社會矛盾、政府貪腐，以及威權統治等多重因素交互作用下，所引發的大規模民眾抗爭與軍事鎮壓事件。</p>
+<p>其中，<strong>嘉義市及嘉義地區是二二八事件中南臺灣相當重要的衝突區域</strong>。嘉義不僅發生民眾集結、接管機關、武裝衝突，也牽涉嘉義水上機場、地方武裝力量及國軍增援部隊。事件對嘉義地方政治、社會菁英、知識分子與一般家庭造成深遠影響。</p>
+<p>以下按照歷史時間順序，分成全臺事件背景、事件爆發、嘉義市及周邊發展、軍事鎮壓，以及事件後的影響來說明。</p>
+<hr>
+<h4>一、二二八事件發生以前：臺灣社會為何累積如此深的民怨？</h4>
+<h4>1. 1945年日本戰敗，臺灣進入國民政府接收時期</h4>
+<p>1945年8月15日，日本宣布無條件投降，結束第二次世界大戰。</p>
+<p>同年10月25日，中華民國政府正式接收臺灣。當時許多臺灣民眾對日本殖民統治結束抱持期待，希望新的政府能帶來政治改革、經濟復甦及更好的生活。</p>
+<p>然而，接收後的實際情況，逐漸與民眾期待產生落差。</p>
+<p>當時政府在臺灣設置「臺灣省行政長官公署」，由陳儀擔任行政長官，並兼任警備總司令。</p>
+<p>這套制度有一個重要特徵：行政、司法、立法及軍事權力高度集中在行政長官公署，缺乏有效的權力制衡。</p>
+<p>臺灣人雖然在日本統治結束後期待參與公共事務，但在新政府的行政體系中，重要職位多由隨政府來臺的人員擔任，本地人士參與決策的空間相對有限。</p>
+<p>這種政治上的失落感，逐漸成為社會不滿的來源。</p>
+<h4>2. 經濟惡化與官員貪腐</h4>
+<p>戰後臺灣面臨幾個嚴重問題：</p>
+<ul>
+<li><strong>物價飛漲：</strong> 戰爭造成生產與運輸體系受損，貨幣供給與物價問題更加嚴重，民眾生活負擔沉重。</li>
+<li><strong>民生物資不足：</strong> 糧食、燃料及日常用品供應不穩定。</li>
+<li><strong>統制經濟：</strong> 政府掌握許多重要產業及物資，包含糖、米、鹽、菸酒等專賣或統制體系。</li>
+<li><strong>官員貪腐：</strong> 接收過程中，部分官員利用職權謀取利益，甚至涉及接收日產不當、物資舞弊等問題。</li>
+<li><strong>失業與產業衰退：</strong> 戰後經濟復原不如預期，原有產業受到衝擊，失業問題加劇。</li>
+</ul>
+<p>尤其是政府接收日本企業、工廠及其他資產時，部分民眾認為本地人士應有合理參與機會，但實際上許多重要資產落入政府控制。</p>
+<h4>3. 族群及文化隔閡</h4>
+<p>當時臺灣人民經過五十年的日本殖民統治，與中國大陸來臺的官員、軍人，在語言、生活習慣、教育背景及社會經驗方面存在差異。</p>
+<p>這些差異本身並不必然導致衝突，但當政治權力分配不均、經濟利益受到影響，又缺乏有效的溝通管道時，就容易形成族群間的不信任。</p>
+<p>必須特別說明：二二八事件不能簡化為本省人與外省人的族群鬥爭。當時許多衝突的核心，是人民對政府施政及軍警行為的不滿；也有外省籍人士反對不當統治，甚至協助保護臺灣民眾。</p>
+<h4>4. 嘉義地區在事件前的社會背景</h4>
+<p>戰後的嘉義具有幾項重要特徵：</p>
+<ul>
+<li>嘉義市是嘉南平原的重要城市，也是農業、商業及交通中心。</li>
+<li>嘉義車站連結南北鐵路，是人員與消息流通的重要據點。</li>
+<li>嘉義周邊有農業、糖業及相關產業，民生經濟與政府統制政策密切相關。</li>
+<li>嘉義地區有地方仕紳、醫師、教師、文化人士及地方政治人物，具有一定的社會組織能力。</li>
+<li>嘉義鄰近山區，與鄒族部落有交通及社會聯繫，後來也成為事件發展的重要因素。</li>
+</ul>
+<p>因此，當臺北的衝突消息傳到嘉義時，地方社會很快就能透過車站、街頭集會及廣播等管道動員。</p>
+<hr>
+<h4>二、1947年2月27日至3月1日：臺北事件爆發</h4>
+<h4>1. 2月27日：天馬茶房緝菸事件</h4>
+<p>1947年2月27日晚上約7時30分，臺北市大稻埕一帶，現在南京西路附近的天馬茶房周邊，發生專賣局查緝私菸事件。</p>
+<p>當時，一名女性菸販林江邁正在販售私菸。</p>
+<p>專賣局查緝人員前往取締，除了沒收菸品及財物，也與林江邁發生衝突。查緝員葉得根以槍托毆打她，造成頭部受傷。</p>
+<p>周圍民眾看不下去，開始聚集抗議。</p>
+<p>在混亂過程中，查緝人員開槍，流彈擊中市民陳文溪，導致他死亡。</p>
+<p>這件事情立即引起群眾憤怒。</p>
+<p>當時民眾認為，政府官員平日執法態度惡劣，現在又發生毆打婦女、開槍打死無辜市民的事情，已經到了不能容忍的程度。</p>
+<h4>2. 2月28日：抗議演變為政治事件</h4>
+<p>第二天，民眾開始在臺北街頭集結。</p>
+<p>群眾要求政府：</p>
+<ul>
+<li>懲辦涉案查緝人員。</li>
+<li>公開調查事件真相。</li>
+<li>改善專賣局的執法方式。</li>
+<li>改革政府施政。</li>
+</ul>
+<p>民眾先後前往專賣局臺北分局及行政長官公署抗議。</p>
+<p>但在行政長官公署前，軍警以機槍向群眾射擊，造成多人死傷。</p>
+<p>這是事件擴大的關鍵轉折。</p>
+<p>原本以緝菸血案為起點的抗議，轉變成對行政長官公署及國民政府統治方式的全面不滿。</p>
+<p>部分民眾前往臺灣廣播電臺，向全臺廣播事件經過，呼籲其他地方響應。</p>
+<h4>3. 3月1日：全臺各地開始響應</h4>
+<p>臺北方面開始組成二二八事件處理委員會，希望透過政治協商解決衝突。</p>
+<p>然而，消息已經傳遍全臺。</p>
+<p>包括基隆、桃園、新竹、臺中、彰化、嘉義、臺南、高雄等地，陸續發生抗議、集會及官民衝突。</p>
+<hr>
+<h4>三、嘉義市二二八事件：從民眾抗議到武裝對峙</h4>
+<p>嘉義市的二二八事件，主要從1947年3月2日開始迅速擴大。</p>
+<p>它與臺北事件有相同的起因，但後續發展出具有嘉義地方特色的情況：市民動員、地方政府失去控制、國軍退守水上機場、民間武裝力量介入，以及後來的談判與鎮壓。</p>
+<h4>1. 3月2日：消息傳到嘉義，民眾開始集結</h4>
+<p>3月1日前後，臺北發生緝菸血案及軍警射擊民眾的消息傳到嘉義。</p>
+<p>3月2日下午，部分從彰化、臺中南下的青年抵達嘉義，開始在嘉義火車站與中央噴水池之間公開演講。</p>
+<p>他們向民眾說明臺北發生的事情，呼籲嘉義市民響應抗爭。</p>
+<p>這個地點值得注意。</p>
+<p>嘉義火車站及中央噴水池附近，當時是市區重要的交通與商業活動區域，民眾往來密集，因此集會消息很快傳播。</p>
+<p>群眾逐漸聚集，開始對地方政府及警察機關提出抗議。</p>
+<p>隨後，民眾包圍嘉義市長孫志俊的官舍及嘉義警察局。</p>
+<h4>2. 國軍進入市區，雙方發生衝突</h4>
+<p>當時駐守嘉義市東門町的國軍部隊，主要為第二十一師第一營，由羅迪光擔任營長。</p>
+<p>在市長孫志俊要求下，羅迪光率領部隊進入市區。</p>
+<p>然而，軍隊進入市區並未平息群眾情緒，反而使緊張局勢升高。</p>
+<p>軍民雙方發生衝突，軍方使用武力，民眾也開始攻擊軍事據點。</p>
+<p>當時遭到民眾攻擊的據點包括：</p>
+<ul>
+<li>憲兵營。</li>
+<li>紅毛埤第十九軍械庫（今嘉義蘭潭一帶）。</li>
+<li>東門町軍營。</li>
+<li>水上機場。</li>
+</ul>
+<p>根據地方史料，當天晚上約9時，民眾已經接收嘉義市政府。</p>
+<p>這表示嘉義地方行政機關已經失去原有的控制能力。</p>
+<h4>3. 3月3日：嘉義市出現權力真空</h4>
+<p>3月3日，嘉義市的行政及治安秩序進一步混亂。</p>
+<p>市長孫志俊及部分軍警人員退守水上機場，原本由政府掌握的市區行政系統陷入停擺。</p>
+<p>市民方面則組成「二二八事件處理委員會」，試圖接手維持地方秩序。</p>
+<p>這個處理委員會並非單純的武裝組織，它也負責協調市民、處理治安及維持城市運作。</p>
+<p>當時地方仕紳及社會人士必須面對一個實際問題：</p>
+<p>政府機關已經無法正常運作，如何避免市區陷入更大規模的暴力與混亂？</p>
+<p>因此，處理委員會除了參與抗爭，也開始扮演臨時地方治理的角色。</p>
+<h4>4. 鄒族力量介入：嘉義事件的重要特殊性</h4>
+<p>嘉義二二八事件與臺灣其他地區不同的一個特色，是鄒族人士參與了地方秩序維持及武裝行動。</p>
+<p>當時嘉義地方人士希望尋求山區原住民族協助，以維持市區治安。</p>
+<p>他們透過三民主義青年團相關人士，聯繫當時擔任吳鳳鄉（今阿里山鄉）鄉長的高一生（鄒名吾雍・雅達烏猶卡那）。</p>
+<p>高一生是一位具有現代教育背景的鄒族政治及社會領袖，在當時面臨相當複雜的政治處境。</p>
+<p>另一方面，曾在日本軍隊服役的鄒族人士湯守仁（雅巴斯勇・優路拿納），對是否介入嘉義市的衝突，與高一生有不同考量。</p>
+<p>相關史料記載，兩人曾針對是否派族人前往嘉義協助發生意見分歧。</p>
+<p>後來，鄒族部隊確實有人下山，參與嘉義地方的治安維持及相關武裝行動。</p>
+<p>值得注意的是，鄒族人士並不是單純支持某一方。他們同時面對不同政治勢力的請求與壓力，也必須考慮部落安全及自身族群的生存。</p>
+<p>同一時期，臺南縣長袁國欽及部分縣府人員也曾進入山區尋求保護，使高一生面臨更加複雜的處境。</p>
+<p>這是嘉義二二八事件中，值得深入了解的一段原住民族歷史。</p>
+<hr>
+<h4>5. 3月4日至10日：水上機場成為對峙核心</h4>
+<p>這是嘉義二二八事件最重要的階段。</p>
+<p>首先要了解，水上機場當時是國軍在嘉義地區的重要軍事據點，具有空軍運輸、物資補給及兵力調度功能。</p>
+<p>當嘉義市區逐漸落入民眾控制後，水上機場便成為政府軍警退守的地方。</p>
+<p>而民眾希望迫使軍隊放下武器、停止對市區的攻擊，因此開始圍困機場。</p>
+<p><strong>3月4日：</strong></p>
+<p>國軍部隊退守山仔頂一帶，並利用迫擊砲向市區射擊。</p>
+<p>據地方史料記載，市民陳顯能、林玉芳、林元三等人，在住宅附近遭砲擊身亡，其他民眾也有傷亡。</p>
+<p>這使嘉義市民更加憤怒。</p>
+<p><strong>3月5日：</strong></p>
+<p>嘉義方面的武裝力量進一步集結。</p>
+<p>來自臺中、斗六、竹山、新營、鹽水等地的民眾，也陸續前來支援。</p>
+<p>地方史料記載，參與圍攻的民軍總數達三千餘人。這個數字屬於史料記載，實際人數仍有進一步考證空間。</p>
+<p>民軍主要針對兩個地方採取行動：</p>
+<ul>
+<li>紅毛埤第十九軍械庫：希望取得武器及彈藥。</li>
+<li>水上機場：希望迫使軍方解除武裝。</li>
+</ul>
+<p>戰鬥期間，民軍控制機場附近的水源地及發電設施，並中斷機場的水電供應。</p>
+<p>但國軍並未因此投降。</p>
+<p>臺灣警備總司令部參謀長柯遠芬下令以空軍運送糧食，後援抵達後，機場守軍的補給及防衛能力得到改善，雙方進入僵持。</p>
+<p>這場對峙造成嚴重傷亡。</p>
+<p>地方史料記載，民軍在攻擊機場的戰鬥中傷亡三百多人。這個數字應理解為特定史料的估計，而非已經完全核實的統計。</p>
+<p><strong>3月6日至7日：談判與短暫緩和</strong></p>
+<p>在機場補給、雙方僵持的情況下，嘉義二二八事件處理委員會開始與軍方談判。</p>
+<p>3月6日，羅迪光在陳漢平少將陪同下，前往處理委員會與陳復志等人會商。</p>
+<p>3月7日，民方按照談判安排，恢復供應機場自來水，並送去食米、蔬菜及豬肉。</p>
+<p>這個細節相當值得注意。</p>
+<p>即使雙方已經發生武裝衝突，地方民眾仍試圖透過談判解決問題，甚至願意提供生活物資，以避免戰事擴大。</p>
+<p>同一天，湯守仁率領的鄒族人士也參與了相關行動。</p>
+<p><strong>3月8日至10日：談判破裂，局勢惡化</strong></p>
+<p>3月8日，處理委員會提出軍警繳械等和談條件，但孫志俊並未接受。</p>
+<p>此時，水上機場又獲得臺北方面空運的彈藥補給。</p>
+<p>3月9日，軍方再度獲得彈藥，機場周邊的軍事壓力持續升高。</p>
+<p>而另一件更為嚴重的事情，是機場附近劉厝庄的民眾遭到軍隊攻擊。</p>
+<h4>6. 劉厝庄事件：嘉義平民遭受的重大傷害</h4>
+<p>劉厝庄位於水上機場附近，當地居民主要以務農為生。</p>
+<p>由於機場附近持續發生武裝衝突，軍方懷疑部分村民協助民軍，或讓民軍利用村落接近機場。</p>
+<p>1947年3月8日，軍隊進入附近的三和庄，燒毀房屋並槍殺居民。</p>
+<p>3月9日，軍隊進一步包圍劉厝庄。</p>
+<p>根據吳三連台灣史料基金會整理的地方史料：</p>
+<ul>
+<li>軍隊進入村莊搜查及搶掠財物。</li>
+<li>有村民遭當場槍殺。</li>
+<li>有人受傷。</li>
+<li>十名男子被帶到機場附近殺害。</li>
+<li>約十六名村民一度遭拘禁，後來才倖免於難。</li>
+</ul>
+<p>這些村民多為普通農民，不應將其全部視為武裝抗爭者。</p>
+<p>這段歷史反映出，軍事衝突的傷害已經從直接參與對抗的民眾，擴大到附近沒有參戰的平民家庭。</p>
+<p>劉厝庄事件也是嘉義二二八歷史中，研究軍隊鎮壓與地方平民受難時不可忽略的部分。</p>
+<h4>7. 3月10日至11日：鄒族部隊撤離，和平談判代表遭到拘捕</h4>
+<p>3月10日，嘉義二二八事件處理委員會提出新的和談條件，希望能避免更大規模的軍事衝突。</p>
+<p>但當時國軍增援臺灣的消息已經傳到嘉義。</p>
+<p>3月8日，國軍整編第二十一師已在基隆登陸，臺灣各地的軍事鎮壓也逐漸展開。</p>
+<p>鄒族部隊方面，因為漢人地方人士已經提出和平解決的方向，加上自身部落安全的考量，湯守仁率領的部隊於3月10日深夜至11日凌晨撤回山區。</p>
+<p>這也使嘉義民間武裝力量的組成產生變化。</p>
+<p>然而，最令人痛心的事情隨後發生。</p>
+<p>3月11日，嘉義二二八事件處理委員會為了避免軍民繼續交戰，派出代表前往水上機場談判。</p>
+<p>這些代表原本是要進行和平協商，卻遭軍方拘留。</p>
+<p>地方史料所記載的代表包括：</p>
+<ul>
+<li><strong>陳復志</strong></li>
+<li><strong>陳澄波</strong></li>
+<li><strong>潘木枝</strong></li>
+<li><strong>柯麟</strong></li>
+<li><strong>林文樹</strong></li>
+<li><strong>邱鴛鴦</strong></li>
+<li><strong>劉傳來</strong></li>
+<li><strong>王鐘麟</strong></li>
+</ul>
+<p>其中，邱鴛鴦、劉傳來、王鐘麟等人後來獲釋，林文樹則在數日後獲釋。</p>
+<p>陳復志、陳澄波、潘木枝、柯麟等人則遭到殺害。</p>
+<p>這個事件有一項重要的歷史意義：</p>
+<p><strong>原本負責協調民間與政府、希望以和平方式解決衝突的地方代表，也成為軍事鎮壓的受害者。</strong></p>
+<p>這使嘉義的二二八事件不只是武裝衝突，也成為地方政治與社會領袖遭受清算的重要案例。</p>
+<hr>
+<h4>四、嘉義市重要受難者：陳澄波、潘木枝等人的遭遇</h4>
+<pre><code>陳澄波是臺灣重要的近代畫家，也是嘉義出身的文化人士。
+
+他曾赴日本及中國大陸接受藝術教育，在繪畫方面具有重要地位。二二八事件期間，他參與地方公共事務及和平協調，後來遭到拘捕，於1947年3月25日在嘉義火車站前遭公開槍決。</code></pre>
+<pre><code>潘木枝是嘉義地方醫師，長期服務地方居民。
+
+二二八事件期間，他參與處理委員會及地方協調工作，希望透過協商避免衝突擴大。後來遭到軍方拘捕，於1947年3月25日在嘉義火車站前遭槍決。</code></pre>
+<pre><code>柯麟是嘉義地方社會人士，參與二二八事件處理委員會及相關協調工作，後來遭拘捕並遇害。</code></pre>
+<pre><code>陳復志是嘉義地方處理委員會的重要參與者，曾負責與軍方協商，希望停止軍民衝突。1947年3月11日遭拘捕，後來遇害。</code></pre>
+<h4>為什麼陳澄波的遇害特別受到重視？</h4>
+<p>陳澄波不只是嘉義地方人士，也是具有國際藝術經歷的畫家。</p>
+<p>他的作品記錄了臺灣早期城市、街景、人物及生活景象。</p>
+<p>他的遇害，使臺灣社會失去一位重要的藝術家，也使嘉義地方文化界遭受重大打擊。</p>
+<p>更值得注意的是，這些受難者中有醫師、畫家及地方公共事務參與者。他們並非全都是軍事組織的領導者，而是許多原本具有地方社會影響力、試圖維持秩序或協商的人士。</p>
+<p>1947年3月25日，陳澄波、潘木枝等人在嘉義火車站前遭公開槍決，這成為嘉義二二八事件最令人難以忘懷的歷史場景之一。</p>
+<hr>
+<h4>五、1947年3月12日至5月：嘉義進入軍事接管與清鄉時期</h4>
+<h4>1. 3月12日至13日：國軍重新控制嘉義市</h4>
+<p>3月11日之後，國軍增援部隊陸續進入嘉義地區。</p>
+<p>3月12日，羅迪光所屬部隊進入嘉義市區，開始拘捕部分民眾及搜查相關人士。</p>
+<p>3月13日，國軍第二十一師相關部隊進入市區，市長孫志俊返回市政府。</p>
+<p>政府方面開始要求各地區的里長、鄰長提供二二八事件參與者的資訊，並展開搜捕。</p>
+<p>嘉義市原先由民眾組成的處理委員會，至此已經無法繼續維持原有運作。</p>
+<h4>2. 3月中下旬：清鄉與政治清算</h4>
+<p>所謂「清鄉」，是政府以肅清參與二二八事件的所謂暴徒及相關人士為名，進行搜查、逮捕、偵訊及處決等行動。</p>
+<p>嘉義地區受到的影響尤其深遠。</p>
+<p>因為在事件初期，嘉義有相當多地方仕紳、青年、教師、醫師、學生及一般民眾參與集會或協助地方治安。</p>
+<p>國軍重新控制城市後，這些人有些被視為抗爭參與者，有些則因曾經與處理委員會往來而遭到懷疑。</p>
+<p>其結果包括：</p>
+<ul>
+<li>地方政治及社會領袖遭到拘捕。</li>
+<li>部分知識分子、醫師及文化人士遭到殺害。</li>
+<li>曾經參與地方抗爭的青年被追查。</li>
+<li>一般民眾因親友、鄰里關係或曾參與集會而受到牽連。</li>
+<li>地方社會開始出現恐懼、沉默與互不信任的現象。</li>
+</ul>
+<p>對嘉義市而言，這不只是幾天的軍事衝突，而是地方社會原有組織及公共生活遭到重大破壞。</p>
+<h4>3. 1947年5月：事件進入尾聲</h4>
+<p>二二八事件的軍事鎮壓及清鄉並非在3月13日就結束。</p>
+<p>3月下旬至5月中旬，政府仍持續進行清鄉及逮捕行動。</p>
+<p>1947年5月16日，臺灣省警備總司令部宣布解除戒嚴，通常被視為狹義二二八事件告一段落的時間。</p>
+<p>但是，許多受難者已經死亡、失蹤或遭到監禁，家庭生活也受到不可逆的傷害。</p>
+<hr>
+<h4>六、嘉義市二二八事件的地點與歷史脈絡</h4>
+<p>如果要真正理解嘉義二二八事件，我認為不能只看人物及日期，還必須了解當時的地理位置。</p>
+<p>以下整理幾個重要地點。</p>
+<table>
+<thead>
+<tr>
+<th>地點</th>
+<th>歷史意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>嘉義火車站</td>
+<td>青年集結、訊息傳播及後來公開槍決的地點</td>
+</tr>
+<tr>
+<td>中央噴水池</td>
+<td>民眾集會與街頭演講地點</td>
+</tr>
+<tr>
+<td>嘉義市舊市區</td>
+<td>民眾抗爭及地方行政權力轉變的核心</td>
+</tr>
+<tr>
+<td>紅毛埤（蘭潭）</td>
+<td>第十九軍械庫所在地</td>
+</tr>
+<tr>
+<td>水上機場</td>
+<td>國軍退守、民軍圍困及談判的中心</td>
+</tr>
+<tr>
+<td>劉厝庄</td>
+<td>附近平民遭軍隊攻擊的受難地區</td>
+</tr>
+</tbody>
+</table>
+<p>要特別區分：水上機場及劉厝庄位於今天的嘉義縣水上鄉，不是嘉義市行政區內，但在1947年的嘉義事件中，兩者與嘉義市區的軍事及政治發展密切相關。</p>
+<hr>
+<h4>七、二二八事件對嘉義市造成哪些長期影響？</h4>
+<h4>1. 地方知識分子及社會領袖遭受重大損失</h4>
+<p>陳澄波、潘木枝等人的死亡，使嘉義失去一批具有公共影響力的地方人士。</p>
+<p>這些人原本可能繼續參與地方教育、文化、醫療、藝術及公共事務，卻在事件中遭到殺害。</p>
+<p>對地方社會而言，這種損失不只是個人生命的消逝，也包括公共領導人才及社會信任網絡的瓦解。</p>
+<h4>2. 嘉義社會形成長期的政治恐懼</h4>
+<p>二二八事件後，政府對參與者及相關人士的追查，使許多家庭不敢談論親人的遭遇。</p>
+<p>部分家庭即使知道親人被捕或遇害，也不敢公開追究。</p>
+<p>尤其是受難者的子女及後代，可能在成長過程中只知道家中曾經發生過某些事情，卻不清楚真正原因。</p>
+<p>這種歷史記憶的中斷，是二二八事件長期影響的一部分。</p>
+<h4>3. 鄒族社會也受到後續政治壓力</h4>
+<p>鄒族人士在嘉義二二八事件中的參與，也使後續政治局勢更加複雜。</p>
+<p>高一生及湯守仁等人的歷史經歷，並沒有隨著1947年事件結束而告一段落。</p>
+<p>1947年之後，臺灣進入更長期的政治監控及白色恐怖時期，部分曾經參與二二八事件或具有地方政治影響力的原住民族人士，後來也遭到政府追查。</p>
+<p>高一生於1954年遭國民政府處決，湯守仁也在1950年代因政治案件遭到逮捕及判刑。</p>
+<p>這說明二二八事件對嘉義鄒族社會的影響，延續到事件結束多年以後。</p>
+<h4>4. 白色恐怖時期使歷史真相長期受到壓抑</h4>
+<p>1949年臺灣正式進入戒嚴時期。</p>
+<p>政府透過政治案件偵辦、新聞與言論管制，以及情治機關監控，形成長期威權統治。</p>
+<p>二二八事件成為社會長期不敢公開討論的歷史。</p>
+<p>嘉義地方受難者家屬，也往往只能私下保存相關記憶。</p>
+<hr>
+<h4>八、1987年以後：嘉義開始重新追尋二二八歷史</h4>
+<p>1987年臺灣解除戒嚴後，社會逐漸開始重新討論二二八事件。</p>
+<p>當時民間團體、受難者家屬及人權工作者積極要求：</p>
+<ul>
+<li>政府公開歷史檔案。</li>
+<li>追查受難者失蹤及死亡真相。</li>
+<li>為受難者平反。</li>
+<li>政府正式道歉。</li>
+<li>對受難者及家屬進行補償。</li>
+<li>建立紀念設施，保存歷史記憶。</li>
+</ul>
+<p>1992年，行政院公布《二二八事件研究報告》。</p>
+<p>1995年，政府公布《二二八事件處理及補償條例》，並由總統代表政府向二二八受難者及家屬道歉。</p>
+<p>嘉義地方也逐步進行歷史資料蒐集、口述訪談、紀念活動及受難者研究。</p>
+<p>其中，陳澄波及潘木枝等人的歷史，也逐漸從家庭記憶轉變為公開的地方歷史。</p>
+<hr>
+<h4>九、二二八事件的整體時間軸</h4>
+<p>以下將全臺事件與嘉義地方發展放在一起比較：</p>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>全臺事件</th>
+<th>嘉義地區事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1945年8月</td>
+<td>日本宣布投降</td>
+<td>臺灣進入戰後接收時期</td>
+</tr>
+<tr>
+<td>1945年10月</td>
+<td>國民政府接收臺灣</td>
+<td>嘉義進入新政府統治</td>
+</tr>
+<tr>
+<td>1947年2月27日</td>
+<td>臺北發生緝菸血案</td>
+<td>尚未大規模爆發</td>
+</tr>
+<tr>
+<td>2月28日</td>
+<td>臺北群眾遭軍警射擊</td>
+<td>消息開始傳播</td>
+</tr>
+<tr>
+<td>3月1日</td>
+<td>全臺各地響應</td>
+<td>嘉義民眾得知消息</td>
+</tr>
+<tr>
+<td>3月2日</td>
+<td>各地抗爭擴大</td>
+<td>嘉義市民集結、與軍警發生衝突</td>
+</tr>
+<tr>
+<td>3月3日</td>
+<td>各地處理委員會成立</td>
+<td>嘉義市出現權力真空</td>
+</tr>
+<tr>
+<td>3月4日</td>
+<td>全臺衝突持續</td>
+<td>軍隊退守，市區遭砲擊</td>
+</tr>
+<tr>
+<td>3月5日</td>
+<td>國軍增援準備</td>
+<td>民軍圍攻紅毛埤及水上機場</td>
+</tr>
+<tr>
+<td>3月6日至7日</td>
+<td>各地嘗試協商</td>
+<td>嘉義展開談判及物資供應</td>
+</tr>
+<tr>
+<td>3月8日至10日</td>
+<td>國軍開始在基隆登陸</td>
+<td>機場獲得補給，劉厝庄遭攻擊</td>
+</tr>
+<tr>
+<td>3月11日</td>
+<td>全臺軍事鎮壓擴大</td>
+<td>和平談判代表遭拘捕</td>
+</tr>
+<tr>
+<td>3月12日至13日</td>
+<td>國軍控制各地</td>
+<td>國軍重新控制嘉義市</td>
+</tr>
+<tr>
+<td>3月25日</td>
+<td>各地清鄉持續</td>
+<td>陳澄波、潘木枝等人在嘉義遭公開槍決</td>
+</tr>
+<tr>
+<td>3月至5月</td>
+<td>全臺持續清鄉</td>
+<td>嘉義地方人士及民眾受到追查</td>
+</tr>
+<tr>
+<td>5月16日</td>
+<td>宣布解除戒嚴</td>
+<td>狹義二二八事件告一段落</td>
+</tr>
+</tbody>
+</table>
+<p><em>註：嘉義部分日期及軍民行動的細節，因官方檔案、地方口述歷史與研究者整理有所差異，上表以主要發展階段呈現。</em></p>
+<hr>
+<h4>十、如何客觀理解嘉義二二八事件？</h4>
+<p>我認為，研究嘉義二二八事件，有五個歷史重點特別值得注意。</p>
+<p><strong>第一，事件不是單純由一件緝菸案件造成。</strong></p>
+<p>緝菸血案是導火線，真正的背景是戰後政府接收失當、政治權力集中、經濟困難、官員貪腐及社會矛盾。</p>
+<p><strong>第二，嘉義民眾的行動具有不同層次。</strong></p>
+<p>有些人參與街頭抗議，有些人協助維持地方治安，有些人參與武裝行動，也有人只是提供食物、醫療及其他協助。不能把所有參與者都視為武裝叛亂者。</p>
+<p><strong>第三，嘉義水上機場的對峙是整個嘉義事件的關鍵。</strong></p>
+<p>這場對峙使地方衝突由市區的政治抗爭，進一步發展成軍事衝突，也使附近村莊的平民受到波及。</p>
+<p><strong>第四，和平協商者也成為受難者。</strong></p>
+<p>陳澄波、潘木枝、陳復志等人的遭遇，反映出當時政府對地方社會領袖的追查與處置，已經超出單純恢復治安的範圍。</p>
+<p><strong>第五，二二八事件的傷害延續數十年。</strong></p>
+<p>它不只是1947年的歷史，也影響臺灣後來的政治體制、族群關係、人權發展，以及嘉義地方家庭的集體記憶。</p>
+<hr>
+<h4>結語：嘉義的二二八，不只是歷史事件，更是地方社會的集體創傷</h4>
+<p>如果把整個二二八事件濃縮成一句話：</p>
+<p><strong>1947年的嘉義，是從民眾反抗不當統治開始，經過地方自治與武裝對峙，最後遭遇國軍鎮壓及政治清算的一段歷史。</strong></p>
+<p>嘉義與臺北最大的不同，在於嘉義的事件發展出水上機場長期對峙、鄒族人士介入、劉厝庄平民受難，以及陳澄波、潘木枝等地方重要人士遭到殺害等具有地方特色的歷史。</p>
+<p>今天走過嘉義火車站、中央噴水池、蘭潭，甚至水上鄉的村落，看到的是一個平靜的城市與農村。</p>
+<p>但在1947年，這些地方曾經發生過抗爭、砲擊、死亡與政治清算。</p>
+<p>了解這段歷史，不是為了延續仇恨，而是希望後代能夠明白：政府權力必須受到制衡，人民的生命與基本權利必須受到保障，政治分歧也應該透過制度與和平方式解決。</p>
+<p>這才是研究二二八事件，尤其是研究嘉義二二八事件，最重要的歷史意義。</p>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="About.html">Previous: About</a></div>
+<div class="next"><a href="延平學院.html">Next: 延平學院</a> &gt;&gt;</div>
+</nav>
+<script>
+(function(){
+  function restorePreNewlines(){
+    var nodes=document.querySelectorAll('pre');
+    for(var i=0;i<nodes.length;i++){
+      var pre=nodes[i], html=pre.innerHTML;
+      if(!html) continue;
+      var fixed=html.replace(/<br\s*\/?\s*(?:\s[^>]*)?>/gi,'\n').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+      if(fixed!==html) pre.innerHTML=fixed;
+    }
+  }
+  function run(){
+    restorePreNewlines();
+    if(!window.SyntaxHighlighter) return;
+    try{
+      if(SyntaxHighlighter.config){ SyntaxHighlighter.config.bloggerMode=true; SyntaxHighlighter.config.stripBrs=false; }
+      if(typeof SyntaxHighlighter.all==='function') SyntaxHighlighter.all();
+    }catch(e){}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run,{once:true});
+  else run();
+})();
+</script>
+</div><!-- /tipue_search_content -->
+
+<div class="container">
+  <div class="row pt-3 mx-auto">
+    <p>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+      All rights reserved |
+      <i class="icon-heart" aria-hidden="true"></i>
+      by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    </p>
+  </div>
+</div>
+
+</div><!-- /site-wrap -->
+
+<script src="./../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="./../static/chimper/js/jquery-ui.js"></script>
+<script src="./../static/chimper/js/popper.min.js"></script>
+<script src="./../static/chimper/js/bootstrap.min.js"></script>
+<script src="./../static/chimper/js/owl.carousel.min.js"></script>
+<script src="./../static/chimper/js/jquery.stellar.min.js"></script>
+<script src="./../static/chimper/js/jquery.countdown.min.js"></script>
+<script src="./../static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="./../static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="./../static/chimper/js/aos.js"></script>
+<script src="./../static/chimper/js/main.js"></script>
+</body>
+</html>
